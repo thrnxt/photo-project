@@ -1,0 +1,21 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+</head>
+<body>
+<h2>Вход</h2>
+<form action="/login" method="post" th:object="${user}">
+    <label for="username">Имя пользователя</label>
+    <input th:field="*{username}" type="text" id="username" required>
+    <label for="password">Пароль</label>
+    <input th:field="*{password}" type="password" id="password" required>
+    <button type="submit">Войти</button>
+</form>
+<p>Нет аккаунта? Не беда <a href="/register">Зарегистрироваться</a></p>
+</body>
+</html>
